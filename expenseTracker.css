@@ -1,0 +1,585 @@
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+ 
+   text-align: center;
+   transform: translate(-50%, -50%);
+   width: 400px;
+}
+
+
+
+
+.firstPage img{
+    width:400px;
+    height: auto;
+}
+
+.firstPage h3{
+color: blue;
+}
+
+
+#firstPageButton{
+    background-color: blue;
+    color: whitesmoke;
+    padding: 10px;
+    border: none;
+}
+
+
+.separator{
+    display: flex;
+    align-items: center;
+}
+
+.separator .line{
+    height: 2px;
+    flex: 1;
+    background-color: #000;
+}
+
+.separator h2{
+
+}
+
+
+#secondPointNext{
+    white-space:pre;
+    background-color: blue;
+    color: cornsilk;
+    padding: 10px;
+}
+
+.secondPoint input{
+background-color: rgb(234, 232, 240);
+border:1px #c6c6c6 solid;
+padding: 10px;
+}
+
+.budgetDisplay{
+display: none;
+}
+
+
+.categories{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.namer{
+    white-space: pre;
+    padding: 10px;
+}
+
+.add{
+    background-color: blue;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.headTalk{
+    background-color: #ecd0f0;
+}
+
+.headcss{
+    padding: 15px;
+}
+
+.headerccs2{
+    white-space: pre;
+}
+
+
+.plus{
+    font-size: 40px;
+    color: green;
+
+
+    right: 20px; 
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: rgb(196, 196, 196);
+    color: rgb(136, 122, 122);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+   padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px black solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.description{
+    background-color: #ecd0f0;
+    padding: 12px;
+    border: 1px rgb(161, 149, 149) solid;
+}
+
+.budget{
+    background-color: #ecd0f0;
+    padding: 12px;
+    border: 1px rgb(161, 149, 149) solid;
+}
+
+.tinyTalk{
+    color: orangered;
+}
+
+
+
+
+
+
+
+.let1{
+    float: right;
+    padding-right: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+.let2{
+    float: right;
+    padding-right: 10px;
+   cursor: pointer;
+}
+
+
+
+
+
+
+
+#salary, #other, .netIncome, .netIncome2, #home, #daily, .provisionalBal, .remaining{
+    border: none;
+}
+
+
+
+
+
+
+
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+   
+}
+
+.popup .content{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(29, 14, 14);
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: black;
+
+    color: whitesmoke;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.description2{
+    background-color: #ecd0f0;
+    padding: 12px;
+    border: 1px rgb(161, 149, 149) solid;
+}
+
+.budget2{
+    background-color: #ecd0f0;
+    padding: 12px;
+    border: 1px rgb(161, 149, 149) solid;
+}
+
+.tinyTalk2{
+    color: orangered;
+}
+
+
+
+
+
+
+
+.saveMe{
+    float: right;
+    padding-right: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+.let3{
+    float: right;
+    padding-right: 10px;
+   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup2 .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+   
+}
+
+.popup2 .content2{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(29, 14, 14);
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: black;
+
+    color: whitesmoke;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.description3{
+    background-color: #ecd0f0;
+    padding: 12px;
+    border: 1px rgb(161, 149, 149) solid;
+}
+
+.budget3{
+    background-color: #ecd0f0;
+    padding: 12px;
+    border: 1px rgb(161, 149, 149) solid;
+}
+
+.tinyTalk3{
+    color: orangered;
+}
+
+
+
+
+
+
+
+.save3{
+    float: right;
+    padding-right: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+.cancel3{
+    float: right;
+    padding-right: 10px;
+   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup3 .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+   
+}
+
+.popup3 .content3{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(29, 14, 14);
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: black;
+
+    color: whitesmoke;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.description4{
+    background-color: #ecd0f0;
+    padding: 12px;
+    border: 1px rgb(161, 149, 149) solid;
+}
+
+.budget4{
+    background-color: #ecd0f0;
+    padding: 12px;
+    border: 1px rgb(161, 149, 149) solid;
+}
+
+.tinyTalk4{
+    color: orangered;
+}
+
+
+
+
+
+
+
+.save4{
+    float: right;
+    padding-right: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+.cancel4{
+    float: right;
+    padding-right: 10px;
+   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup4 .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+   
+}
+
+.popup4 .content4{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(29, 14, 14);
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: black;
+
+    color: whitesmoke;
+    padding: 10px;
+}
+/*
+
+.popup.active .content{
+    display: block;
+}
+
+.popup.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+*/
+
+
+
+
+
+.addExpense{
+    cursor: pointer;
+}
+    
+
+
+
+
+
+
+.progressBar{
+    position: relative;
+    border: 1px black solid;
+    width: 300px;
+    height: 40%;
+}
+
+.progressBarFill{
+    height: 100%;
+  
+    
+    transition: 2s;
+    color: yellowgreen;
+}
+
+.progressBarValue{
+    position: absolute;
+
+    width: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.done{
+    margin-left: 45%;
+    padding: 10px;
+    background-color: darkblue;
+    color: whitesmoke;
+}
+
+
+
+.addExpense{
+    background-color: blue;
+    color: wheat;
+    padding: 10px;
+}
+
+.expenseSaving{
+    background-color: blue;
+    color: wheat;
+    padding: 10px;
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleSheet" type="text/css" href="expenseTracker.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+   <div class="container">  
+
+
+
+<div class="firstPage">
+<img src="image/money.png"><br><br>
+
+<p> 
+<h3>Let's get started!</h3>
+
+Track your income, record your expense, see visual charts of your spending habits, 
+and take control of your money.
+</p>
+<button id="firstPageButton">CREATE YOUR FIRST BUDGET</button>
+</div>
+
+
+
+<div class="secondPoint" style="display: none;">
+<div class="newBudget">
+<label>Start date</label><br>
+<input type="date" id="startDate">
+<br><br>
+<label>End date</label><br>
+<input type="date" id="startDate">
+<br><br>
+<div class="separator">
+<div class="line"></div>
+<h3 id="advanceSimple">Advance &darr;</h3>
+
+</div>
+
+<div class="budgetDisplay"> 
+<label>Budget Display Name</label><br>
+<input type="text" id="budgetName"><br><br>
+</div>
+<span id="secondPointNext">NEXT               ></span>
+
+</div>
+</div>
+
+
+
+
+
+<div class="selectCategories" style="display: none;">
+    <br>
+    <div class="headTalk"> 
+    <p class="headcss"> <span class="headerccs2">Disposable income                  <span class="plus">+</span></span><br></p>
+   </div>
+
+    <div class="categories"> 
+  
+    
+    <span class="add" id="add1">ADD</span> <span >  <span id="salary1" onclick="toggleSalary()" class="namer">Salary/Wages
+                 Current #<input type="text" id="salary" value="0.00" readonly>
+           </span>
+ 
+    
+    Income</span>
+    </div>
+
+    <div class="categories" id="2"> 
+  
+        <span class="add" id="add2">ADD</span> <span  > <span onclick="toggleOther()" class="namer">Other Income
+                     Current #<input type="text" id="other" value="0.00" readonly>
+               </span>
+    
+        
+        Income</span>
+        </div>
+   
+
+
+
+ <div class="headTalk"> 
+        <p class="headcss"> <span class="headerccs2">Budgeted expenses categories        <span class="plus">+</span></span><br></p>
+       </div>
+        <div  class="categories" > 
+      
+        
+        <span class="add" id="add3">ADD</span><span id="3" onclick="toggleHomeRent()">  <span class="namer">Home/Rent
+                     Budgeted #<input type="text" id="home" value="0.00" readonly>
+               </span>
+        
+        
+        Expense Category</span>
+        </div>
+    
+        <div  class="categories" > 
+      
+            <span class="add" id="add4">ADD</span><span id="4"  onclick="toggleDailyLiving()"><span class="namer">Daily Living
+                    Budgeted #<input type="text" id="daily" value="0.00" readonly>
+                   </span>
+            
+            
+            Expense Category</span>
+
+
+            </div>
+
+            <br><br><br>
+            
+<button class="done">DONE</button>
+      
+            <!-- 
+
+        <div id="5" class="categories" onclick="togglePopup(this.id)"> 
+      
+            <p><span class="add">ADD</span> <span class="namer">Trasportation
+                     Budgeted #0.00
+                   </span>
+            </p>
+            
+            <p>Expense Category</p>
+            </div>
+       
+
+
+        <div id="6" class="categories"  onclick="togglePopup(this.id)"> 
+      
+            <p><span class="add">ADD</span> <span class="namer">Entertainment
+                    Budgeted #0.00
+                   </span>
+            </p>
+            
+            <p>Expense Category</p>
+            </div>
+     
+        <div id="7" class="categories" onclick="togglePopup(this.id)"> 
+      
+            <p><span class="add">ADD</span> <span class="namer">Health Care
+                     Budgeted #0.00
+                   </span>
+            </p>
+            
+            <p>Expense Category</p>
+            </div>
+   
+        <div id="8" class="categories" onclick="togglePopup(this.id)" > 
+      
+            <p><span class="add">ADD</span> <span class="namer">Dues/suscriptions
+                   Budgeted #0.00
+          
+                </span>
+            </p>
+            
+            <p>Expense Category</p>
+            </div>
+        
+     
+        <div id="9" class="categories"  onclick="togglePopup(this.id)"> 
+      
+            <p><span class="add">ADD</span> <span class="namer">Financial savings
+                     Budgeted #0.00
+                   </span>
+            </p>
+            
+            <p>Expense Category</p>
+            </div>-->
+   
+  <!--   <div class="popup" id="popup-1">
+        <div class="content"> 
+        <span class="tinyTalk">(You can add more incomes, edit or delete later)</span><br><br>
+        <label>Description</label><br>
+        <input type="text" class="description"><br><br>
+        <label>Estimated budget</label><br>
+        <input type="text" class="budget"><br><br>      
+     <span class="let1">SAVE</span><span class="let2">CANCEL</span>
+     </div>
+    </div>-->
+
+
+    <div class="popup popup-1" style="display: none;">
+        <!--<div class="overlay"></div>-->
+        <div class="content">
+           
+        
+            <span class="tinyTalk">(You can add more incomes, edit or delete later)</span><br><br>
+            <label>Description</label><br>
+            <input type="text" class="description"><br><br>
+            <label>Estimated budget</label><br>
+            <input type="text" class="budget" onkeypress="return isNumberKey(event, id)"><br><br>      
+         <span class="let1">SAVE</span><span class="let2">CANCEL</span>
+    </div>
+</div>
+
+
+
+<div class="popup2 popup-2" style="display: none;">
+    <!--<div class="overlay"></div>-->
+    <div class="content2">
+       
+    
+        <span class="tinyTalk2">(You can add more incomes, edit or delete later)</span><br><br>
+        <label>Description</label><br>
+        <input type="text" class="description2"><br><br>
+        <label>Estimated budget</label><br>
+        <input type="text" class="budget2" onkeypress="return isNumberKey(event, id)"><br><br>      
+     <span class="saveMe">SAVE</span><span class="let3">CANCEL</span>
+</div>
+</div>
+
+
+
+
+
+<div class="popup3 popup-3" style="display: none;">
+    <!--<div class="overlay"></div>-->
+    <div class="content3">
+       
+    
+        <span class="tinyTalk3">(You can add more incomes, edit or delete later)</span><br><br>
+        <label>Description</label><br>
+        <input type="text" class="description3"><br><br>
+        <label>Estimated budget</label><br>
+        <input type="text" class="budget3" onkeypress="return isNumberKey(event, id)"><br><br>      
+     <span class="save3">SAVE</span><span class="cancel3">CANCEL</span>
+</div>
+</div>
+
+
+
+<div class="popup4 popup-4" style="display: none;">
+<!--<div class="overlay"></div>-->
+<div class="content4">
+   
+
+    <span class="tinyTalk4">(You can add more incomes, edit or delete later)</span><br><br>
+    <label>Description</label><br>
+    <input type="text" class="description4"><br><br>
+    <label>Estimated budget</label><br>
+    <input type="text" class="budget4" onkeypress="return isNumberKey(event, id)"><br><br>      
+ <span class="save4">SAVE</span><span class="cancel4">CANCEL</span>
+</div>
+</div>
+<!--<button onclick="togglePopup()">Show popup</button>-->
+
+
+
+
+        </div>
+
+      
+
+
+
+
+
+
+<div class="view" style="display: none;">
+<p>
+    #<input type="text" class="netIncome" value="0.00"><br>
+    Net Disposable income
+</p>
+
+<p>
+    #<input type="text" class="netIncome2" value="0.00"><br>
+    Total Budget
+</p>
+
+<br><br>
+
+<p>
+  
+    #<input type="text" class="provisionalBal" value="0.00"><br>
+    Provisional Balance<br>
+</p>
+
+<p>
+    Remaining to spend<br>
+    #<input type="text" class="remaining" value="0.00"><br>
+   
+</p>
+
+<span>Budget Spent </span>
+<div class="progressBar">
+    <div class="progressBarValue"></div>
+    <div class="progressBarFill">.</div>
+    
+    </div>
+
+<br><br>
+    <span class="addExpense">ADD EXPENSE</span>
+</div>
+
+
+
+    <div class="expenseView" style="display: none;"> 
+
+
+
+    <h2>Add Expense</h2>
+    <label>Pick a category</label><br>
+    <select>
+        <option value="Select">Select</option>
+        <option value="Home/Rent">Home/Rent</option>
+        <option value="Daily Living">Daily Living</option>
+
+    </select><br><br>
+
+
+    <label>Description</label><br>
+    <input type="text" class="expenseDescription"><br><br>
+
+    <label>Amount</label>
+    <input type="text" class="amount" onkeypress="return isNumberKey(event, id)"><br><br>
+
+<button onclick="saveExpense()" class="expenseSaving">SAVE</button>
+</div>
+
+<br><br>
+<br><br>
+
+
+
+    </div>
+
+
+
+    <script src="expenseTracker.js"></script>
+</body>
+</html>
